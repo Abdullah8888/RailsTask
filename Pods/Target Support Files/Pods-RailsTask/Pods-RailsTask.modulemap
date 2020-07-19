@@ -1,0 +1,6 @@
+framework module Pods_RailsTask {
+  umbrella header "Pods-RailsTask-umbrella.h"
+
+  export *
+  module * { export * }
+}

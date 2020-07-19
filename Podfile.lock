@@ -1,0 +1,20 @@
+PODS:
+  - GraphQLicious (0.8.2)
+  - SwiftyJSON (5.0.0)
+
+DEPENDENCIES:
+  - GraphQLicious (~> 0.8)
+  - SwiftyJSON
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - GraphQLicious
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  GraphQLicious: c8468f1dcbbdc74b33fd184db1642f5ed2b0a86a
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+
+PODFILE CHECKSUM: 9c9c6ef6b680b0523212a1c16ade18d877649b99
+
+COCOAPODS: 1.7.5
