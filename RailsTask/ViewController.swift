@@ -7,14 +7,41 @@
 //
 
 import UIKit
+import SwiftyJSON
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UITableViewDelegate, MainViewModelDelegate {
+    
+    
+    private let viewModel = MainViewModel()
+  
+    @IBOutlet weak var tableview: UITableView?
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.delegate = self
+        self.tableview?.delegate = self
+        viewModel.registerReusableViewsForTableView(tableView: tableview!)
+        viewModel.login()
+        viewModel.getRepo()
+        viewModel.getCommit()
+        
         // Do any additional setup after loading the view.
+    }
+    
+    func MainViewModelDidChangeState(state: MainviewModelState) {
+        switch state {
+        case .MainViewDidFetchSuccessful:
+            self.tableview?.reloadData()
+        case .MainViewDidFetchFail:
+            print("it fails")
+                
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70.0
     }
 
 
 }
+
 
