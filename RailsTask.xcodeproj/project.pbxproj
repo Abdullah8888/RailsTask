@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,9 @@
 		C9B3EBA724C4F7F9008602FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9B3EBA624C4F7F9008602FF /* Assets.xcassets */; };
 		C9B3EBAA24C4F7F9008602FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9B3EBA824C4F7F9008602FF /* LaunchScreen.storyboard */; };
 		C9B3EBB524C4F7F9008602FF /* RailsTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3EBB424C4F7F9008602FF /* RailsTaskTests.swift */; };
+		C9B3EBC124C4FA38008602FF /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3EBC024C4FA38008602FF /* NetworkService.swift */; };
+		C9B3EBC324C4FA55008602FF /* RequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3EBC224C4FA55008602FF /* RequestSerializer.swift */; };
+		C9B3EBC624C4FB48008602FF /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3EBC524C4FB48008602FF /* AppConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		C9B3EBB024C4F7F9008602FF /* RailsTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RailsTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B3EBB424C4F7F9008602FF /* RailsTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RailsTaskTests.swift; sourceTree = "<group>"; };
 		C9B3EBB624C4F7F9008602FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9B3EBC024C4FA38008602FF /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		C9B3EBC224C4FA55008602FF /* RequestSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSerializer.swift; sourceTree = "<group>"; };
+		C9B3EBC524C4FB48008602FF /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +91,6 @@
 				3982207784E010EAFF1D42EC /* Pods-RailsTaskTests.debug.xcconfig */,
 				84F4A58AEA7847092C30524A /* Pods-RailsTaskTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -112,6 +117,8 @@
 		C9B3EB9C24C4F7F8008602FF /* RailsTask */ = {
 			isa = PBXGroup;
 			children = (
+				C9B3EBC424C4FB1F008602FF /* AppConfiguration */,
+				C9B3EBBF24C4FA1A008602FF /* NetworkService */,
 				C9B3EB9D24C4F7F8008602FF /* AppDelegate.swift */,
 				C9B3EB9F24C4F7F8008602FF /* SceneDelegate.swift */,
 				C9B3EBA124C4F7F8008602FF /* ViewController.swift */,
@@ -130,6 +137,23 @@
 				C9B3EBB624C4F7F9008602FF /* Info.plist */,
 			);
 			path = RailsTaskTests;
+			sourceTree = "<group>";
+		};
+		C9B3EBBF24C4FA1A008602FF /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				C9B3EBC024C4FA38008602FF /* NetworkService.swift */,
+				C9B3EBC224C4FA55008602FF /* RequestSerializer.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		C9B3EBC424C4FB1F008602FF /* AppConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				C9B3EBC524C4FB48008602FF /* AppConfiguration.swift */,
+			);
+			path = AppConfiguration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,8 +324,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9B3EBC624C4FB48008602FF /* AppConfiguration.swift in Sources */,
+				C9B3EBC324C4FA55008602FF /* RequestSerializer.swift in Sources */,
 				C9B3EBA224C4F7F8008602FF /* ViewController.swift in Sources */,
 				C9B3EB9E24C4F7F8008602FF /* AppDelegate.swift in Sources */,
+				C9B3EBC124C4FA38008602FF /* NetworkService.swift in Sources */,
 				C9B3EBA024C4F7F8008602FF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
