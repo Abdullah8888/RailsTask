@@ -13,6 +13,7 @@ public class NetworkService: NSObject {
     //init our requestSerializer app config
     private var requestSerializer = KGRequestSerializer.init()
     private var config = AppConfiguration.init()
+    private var pat = "b9a6784e368c9051ae3f43d1018cbd5ad0ccae28" //Please generate a new personal access token (PAT) on your github account to have                                                       access to GraphQL server
     
     //A singleton object
     public static let sharedManager = NetworkService()
@@ -49,11 +50,9 @@ public class NetworkService: NSObject {
         let request = NSMutableURLRequest(url: NSURL(string: urlString)! as URL)
         let alteredPayload = payload.replacingOccurrences(of: "query  ", with: "", options: .literal, range: nil)
         let jsonData = try? JSONSerialization.data(withJSONObject: ["query":alteredPayload])
-        let df = String(data: jsonData!, encoding: String.Encoding.utf8)  // This is use for debugging
-        print("the json is \(df)")
         request.httpBody = jsonData
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("bearer 7c19dcb82497675ba9881da1fe1f24aacae8959a", forHTTPHeaderField: "Authorization")
+        request.setValue("bearer \(pat)", forHTTPHeaderField: "Authorization")
         request.setValue("", forHTTPHeaderField: "User-Agent")
         return request
     }

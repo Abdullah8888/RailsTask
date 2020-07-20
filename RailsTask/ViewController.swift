@@ -32,7 +32,10 @@ class ViewController: UIViewController, UITableViewDelegate, MainViewModelDelega
         case .MainViewDidFetchSuccessful:
             self.tableview?.reloadData()
         case .MainViewDidFetchFail:
-            debugPrint("it fails")
+            let confimationAlert = UIAlertController(title: "Unauthorised token", message: "Please generate a new pat on your github to have access github grapql server", preferredStyle: UIAlertController.Style.alert)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            confimationAlert.addAction(cancelAction)
+            present(confimationAlert, animated: true, completion: nil)
                 
         }
     }

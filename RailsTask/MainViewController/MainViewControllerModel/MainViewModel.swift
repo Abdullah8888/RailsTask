@@ -46,11 +46,17 @@ class MainViewModel: NSObject, UITableViewDataSource {
             if success {
                 DispatchQueue.main.async {
                     self.recentCommit = (object?["data"]["repository"]["defaultBranchRef"]["target"]["history"]["edges"].arrayValue)!
-                    print(self.recentCommit.count)
                     
                     self.delegate?.MainViewModelDidChangeState(state: .MainViewDidFetchSuccessful)
                
                 }
+            }
+            else {
+                DispatchQueue.main.async {
+                      self.delegate?.MainViewModelDidChangeState(state: .MainViewDidFetchFail)
+                
+                 }
+               
             }
         }
     }
