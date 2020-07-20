@@ -6,26 +6,58 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TestGithubGraplql" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RailsTask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgImage" translatesAutoresizingMaskIntoConstraints="NO" id="dEd-oF-qPE">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="167"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="167" id="Ngh-FC-soR"/>
+                                </constraints>
+                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yGt-fy-fJY">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="167" width="414" height="695"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rails Task" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKw-VO-gvs">
+                                <rect key="frame" x="10" y="54" width="394" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="list of recent commits" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Rp-2s-CAl">
+                                <rect key="frame" x="10" y="84" width="394" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="yGt-fy-fJY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3m9-UU-gZu"/>
+                            <constraint firstItem="2Rp-2s-CAl" firstAttribute="top" secondItem="CKw-VO-gvs" secondAttribute="bottom" constant="10" id="7QT-QI-6Kh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dEd-oF-qPE" secondAttribute="trailing" id="7vC-LE-Yoz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CKw-VO-gvs" secondAttribute="trailing" constant="10" id="FdT-1C-eNb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yGt-fy-fJY" secondAttribute="trailing" id="IrV-Mq-4WB"/>
-                            <constraint firstItem="yGt-fy-fJY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Xy3-3K-oBU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Rp-2s-CAl" secondAttribute="trailing" constant="10" id="M7f-RL-keZ"/>
+                            <constraint firstItem="CKw-VO-gvs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Pig-L3-llB"/>
+                            <constraint firstItem="yGt-fy-fJY" firstAttribute="top" secondItem="dEd-oF-qPE" secondAttribute="bottom" id="Xy3-3K-oBU"/>
+                            <constraint firstItem="2Rp-2s-CAl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="hYg-Lx-4vT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yGt-fy-fJY" secondAttribute="bottom" id="sUQ-gJ-H4U"/>
+                            <constraint firstItem="dEd-oF-qPE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wCI-ph-Ngg"/>
+                            <constraint firstItem="dEd-oF-qPE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wHd-51-OWt"/>
+                            <constraint firstItem="CKw-VO-gvs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="zxj-ny-J74"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -38,4 +70,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="102.45535714285714"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bgImage" width="518" height="642"/>
+    </resources>
 </document>

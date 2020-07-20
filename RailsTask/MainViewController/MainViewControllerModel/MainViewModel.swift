@@ -27,7 +27,7 @@ class MainViewModel: NSObject, UITableViewDataSource {
     public func login () {
         NetworkService.sharedManager.login(){(success, object, response) in
             if success {
-                print(object)
+                debugPrint(object)
         }
     }
 }
@@ -35,7 +35,7 @@ class MainViewModel: NSObject, UITableViewDataSource {
         NetworkService.sharedManager.getRepo(owner: "rails", name: "rails") {
             (success, object, response) in
             if success {
-                print(object)
+                debugPrint(object)
             }
         }
     }
@@ -72,9 +72,8 @@ class MainViewModel: NSObject, UITableViewDataSource {
    }
    
    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       let cell = tableView.dequeueReusableCell(withIdentifier: "recentCommentCell", for: indexPath) as? MainTableViewCell
+    let cell = tableView.dequeueReusableCell(withIdentifier: "recentCommentCell", for: indexPath) as? MainTableViewCell
     let recentCommits = self.recentCommit[indexPath.item]
-    print("good")
     cell?.updateCell(recentCommit: recentCommits)
     return cell!
    }

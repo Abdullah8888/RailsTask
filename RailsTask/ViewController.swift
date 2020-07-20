@@ -32,7 +32,7 @@ class ViewController: UIViewController, UITableViewDelegate, MainViewModelDelega
         case .MainViewDidFetchSuccessful:
             self.tableview?.reloadData()
         case .MainViewDidFetchFail:
-            print("it fails")
+            debugPrint("it fails")
                 
         }
     }

@@ -53,7 +53,7 @@ public class NetworkService: NSObject {
         print("the json is \(df)")
         request.httpBody = jsonData
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("bearer af52ff1aa41d6a44519834725610f3bc2b2ec75f", forHTTPHeaderField: "Authorization")
+        request.setValue("bearer 7c19dcb82497675ba9881da1fe1f24aacae8959a", forHTTPHeaderField: "Authorization")
         request.setValue("", forHTTPHeaderField: "User-Agent")
         return request
     }
